@@ -83,8 +83,20 @@
                     "description": "File path of a custom HMMER hmm file"
                 },
                 "hmmlist": {
-                    "type": "array",
-                    "description": "[\"all\"] or some combination of [\"antismash\",\"amrfinder\",\"bigslice\",\"classiphage\",\"pfam\",\"prism\",\"resfams\",\"tigrfam\",\"virus_orthologous_groups\"]"
+                    "type": "string",
+                    "description": "'all' or some combination of 'antismash', 'amrfinder', 'bigslice', 'classiphage','pfam', 'prism', 'resfams', 'tigrfam', 'virus_orthologous_groups'",
+                    "enum": [
+                        "all",
+                        "antismash",
+                        "amrfinder",
+                        "bigslice",
+                        "classiphage",
+                        "pfam",
+                        "prism",
+                        "resfams",
+                        "tigrfam",
+                        "virus_orthologous_groups"
+                    ]
                 },
                 "domtblout_path": {
                     "type": "string",
@@ -313,13 +325,13 @@
                 },
                 "HMMSEARCH_E": {
                     "type": "number",
-                    "default": 10.0,
+                    "default": 10,
                     "description": "see pg 74-77: http://eddylab.org/software/hmmer3/3.1b2/Userguide.pdf",
                     "hidden": true
                 },
                 "HMMSEARCH_DOME": {
                     "type": "number",
-                    "default": 10.0,
+                    "default": 10,
                     "description": "see pg 74-77: http://eddylab.org/software/hmmer3/3.1b2/Userguide.pdf",
                     "hidden": true
                 },
